@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reddy SparkClean Pro | Professional Home Cleaning Service &ndash; Book Now</title>
+  <meta name="description" content="Hyderabad's most trusted home cleaning service. Professional cleaners, eco-friendly products, guaranteed satisfaction. WhatsApp now for instant booking &amp; special offers!" />
+  <meta name="keywords" content="home cleaning service, professional cleaners, house cleaning, deep cleaning, bathroom cleaning, kitchen cleaning, Hyderabad" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #1E7BE1;
+      --blue-light: #3B97FF;
+      --blue-dark: #1460B0;
+      --teal: #0EC8C8;
+      --navy: #0A1628;
+      --navy-2: #0F1F3D;
+      --navy-3: #142A50;
+      --white: #FFFFFF;
+      --off-white: #F0F7FF;
+      --text: #C8D8EF;
+      --text-dark: #8BA6CC;
+      --green-wa: #25D366;
+      --green-wa-dark: #1DA851;
+      --accent: #FFB830;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--navy);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* -- TOP STRIP -- */
+    .top-strip {
+      background: var(--blue);
+      color: white;
+      text-align: center;
+      padding: 9px 20px;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .strip-badge {
+      background: var(--accent);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* -- NAVBAR -- */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,22,40,0.94);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(30,123,225,0.2);
+      padding: 14px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--blue), var(--teal));
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+    .logo-accent { color: var(--teal); }
+    .nav-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text);
+      font-size: 14px;
+    }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--green-wa), var(--green-wa-dark));
+      color: white;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.3);
+    }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.45); }
+
+    /* -- HERO -- */
+    .hero {
+      position: relative;
+      min-height: 94vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--navy) 0%, #0A1E3C 50%, #0D2044 100%);
+    }
+    .hero-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+    }
+    .blob-1 {
+      width: 600px; height: 600px;
+      background: rgba(30,123,225,0.15);
+      top: -100px; right: -100px;
+    }
+    .blob-2 {
+      width: 400px; height: 400px;
+      background: rgba(14,200,200,0.08);
+      bottom: -80px; left: 20%;
+    }
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 48px;
+      width: 100%;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(14,200,200,0.12);
+      border: 1px solid rgba(14,200,200,0.3);
+      border-radius: 50px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--teal);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      animation: slideIn 0.6s ease;
+    }
+    .hero h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(36px, 5vw, 62px);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--white);
+      margin-bottom: 20px;
+      animation: slideIn 0.7s 0.1s ease both;
+    }
+    .hero h1 .highlight {
+      background: linear-gradient(90deg, var(--blue-light), var(--teal));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: clamp(15px, 1.8vw, 18px);
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 32px;
+      animation: slideIn 0.7s 0.2s ease both;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      animation: slideIn 0.7s 0.3s ease both;
+    }
+    .btn-wa-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, var(--green-wa), #20BF55);
+      color: white;
+      text-decoration: none;
+      padding: 18px 36px;
+      border-radius: 12px;
+      font-size: 17px;
+      font-weight: 800;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 30px rgba(37,211,102,0.4);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-wa-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+      transition: left 0.5s ease;
+    }
+    .btn-wa-hero:hover::before { left: 100%; }
+    .btn-wa-hero:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(37,211,102,0.55);
+    }
+    .btn-call {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(30,123,225,0.15);
+      border: 1.5px solid rgba(30,123,225,0.4);
+      color: var(--blue-light);
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .btn-call:hover { background: rgba(30,123,225,0.25); transform: translateY(-2px); }
+
+    .hero-guarantee {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-dark);
+      margin-top: 16px;
+    }
+    .hero-guarantee .check { color: var(--teal); font-size: 16px; }
+
+    /* -- HERO CARD (right side) -- */
+    .hero-card {
+      background: rgba(15,31,61,0.8);
+      border: 1px solid rgba(30,123,225,0.25);
+      border-radius: 20px;
+      padding: 32px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.4);
+      animation: floatUp 0.8s 0.4s ease both;
+    }
+    .card-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card-title span { font-size: 22px; }
+    .service-list { list-style: none; margin-bottom: 24px; }
+    .service-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(30,123,225,0.1);
+      font-size: 15px;
+      color: var(--off-white);
+    }
+    .service-list li:last-child { border-bottom: none; }
+    .service-check {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--teal));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; flex-shrink: 0;
+    }
+    .card-wa-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      background: var(--green-wa);
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 800;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    .card-wa-btn:hover { background: var(--green-wa-dark); transform: translateY(-1px); }
+
+    /* -- TRUST BAR -- */
+    .trust-bar {
+      background: var(--navy-2);
+      border-top: 1px solid rgba(30,123,225,0.12);
+      border-bottom: 1px solid rgba(30,123,225,0.12);
+      padding: 18px 48px;
+      display: flex;
+      justify-content: center;
+      gap: clamp(20px, 5vw, 72px);
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--off-white);
+    }
+    .trust-icon { font-size: 20px; }
+    .trust-num { color: var(--teal); font-weight: 800; }
+
+    /* -- SECTIONS -- */
+    .section {
+      padding: 80px 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-eyebrow {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(26px, 3.5vw, 44px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .section-sub {
+      font-size: 16px;
+      color: var(--text);
+      max-width: 540px;
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+
+    /* -- HOW IT WORKS -- */
+    .how-section {
+      background: var(--navy-2);
+      border-top: 1px solid rgba(30,123,225,0.1);
+      border-bottom: 1px solid rgba(30,123,225,0.1);
+      padding: 80px 48px;
+    }
+    .how-inner { max-width: 1200px; margin: 0 auto; }
+    .how-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+      position: relative;
+    }
+    .step-card {
+      text-align: center;
+      position: relative;
+    }
+    .step-num {
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--teal));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 22px;
+      font-weight: 900;
+      color: white;
+      margin: 0 auto 18px;
+      box-shadow: 0 4px 20px rgba(30,123,225,0.4);
+    }
+    .step-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .step-desc { font-size: 13px; color: var(--text); line-height: 1.6; }
+
+    /* -- TESTIMONIALS -- */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .testimonial-card {
+      background: var(--navy-2);
+      border: 1px solid rgba(30,123,225,0.12);
+      border-radius: 16px;
+      padding: 26px;
+      transition: all 0.3s ease;
+    }
+    .testimonial-card:hover { border-color: rgba(30,123,225,0.35); transform: translateY(-4px); }
+    .review-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .stars { color: var(--accent); font-size: 17px; letter-spacing: 1px; }
+    .verified {
+      font-size: 11px;
+      color: var(--teal);
+      font-weight: 700;
+      background: rgba(14,200,200,0.1);
+      padding: 3px 8px;
+      border-radius: 20px;
+    }
+    .review-text {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 18px;
+      font-style: italic;
+    }
+    .reviewer-info { display: flex; align-items: center; gap: 12px; }
+    .reviewer-avatar {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; font-weight: 800; color: white;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .reviewer-name { font-weight: 700; color: var(--white); font-size: 14px; }
+    .reviewer-loc { font-size: 12px; color: var(--text-dark); }
+
+    /* -- COUNTDOWN -- */
+    .deal-banner {
+      background: linear-gradient(135deg, var(--navy-3), rgba(30,123,225,0.15));
+      border: 1px solid rgba(30,123,225,0.25);
+      border-radius: 20px;
+      padding: 40px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+      max-width: 1104px;
+      margin: 0 auto;
+    }
+    .deal-text h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(22px, 3vw, 34px);
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .deal-text h3 em { color: var(--teal); font-style: normal; }
+    .deal-text p { font-size: 15px; color: var(--text); }
+    .deal-timer {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .dtime-unit { text-align: center; }
+    .dtime-val {
+      display: block;
+      background: var(--navy);
+      border: 1px solid rgba(30,123,225,0.3);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--white);
+      min-width: 60px;
+    }
+    .dtime-lbl { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal); margin-top: 6px; display: block; }
+    .dtime-sep { font-size: 28px; font-weight: 700; color: var(--blue-light); margin-bottom: 18px; }
+    .deal-cta {
+      display: flex; flex-direction: column; gap: 12px; align-items: flex-end;
+    }
+    .deal-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--green-wa);
+      color: white; text-decoration: none;
+      padding: 16px 32px;
+      border-radius: 10px;
+      font-size: 15px; font-weight: 800;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.35);
+      animation: pulse 2.5s infinite;
+      white-space: nowrap;
+    }
+    .deal-btn:hover { background: var(--green-wa-dark); animation: none; transform: translateY(-2px); }
+    .deal-note { font-size: 12px; color: var(--text-dark); text-align: right; }
+
+    /* -- FINAL CTA -- */
+    .final-cta {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-3) 100%);
+      padding: 80px 48px;
+      text-align: center;
+      border-top: 1px solid rgba(30,123,225,0.12);
+    }
+    .final-cta h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(26px, 4vw, 50px);
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .final-cta h2 .hl {
+      background: linear-gradient(90deg, var(--blue-light), var(--teal));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .final-cta p {
+      font-size: 17px;
+      color: var(--text);
+      margin-bottom: 36px;
+      max-width: 520px;
+      margin-left: auto; margin-right: auto;
+      line-height: 1.7;
+    }
+    .wa-final-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: linear-gradient(135deg, var(--green-wa), #20BF55);
+      color: white;
+      text-decoration: none;
+      padding: 20px 52px;
+      border-radius: 14px;
+      font-size: 18px;
+      font-weight: 800;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 40px rgba(37,211,102,0.4);
+      animation: pulse 2.5s infinite;
+    }
+    .wa-final-btn:hover {
+      animation: none;
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 16px 56px rgba(37,211,102,0.55);
+    }
+
+    /* -- FOOTER -- */
+    footer {
+      background: #060D1A;
+      border-top: 1px solid rgba(30,123,225,0.1);
+      padding: 28px 48px;
+      text-align: center;
+    }
+    footer p { font-size: 13px; color: #3A5070; }
+    footer strong { color: var(--teal); }
+    footer a { color: var(--blue-light); text-decoration: none; }
+
+    /* -- FLOATING WA -- */
+    .floating-wa {
+      position: fixed;
+      bottom: 28px; right: 28px; z-index: 999;
+      background: var(--green-wa);
+      color: white;
+      width: 64px; height: 64px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 24px rgba(37,211,102,0.5);
+      animation: bounce 2s infinite;
+      transition: all 0.3s ease;
+    }
+    .floating-wa:hover { transform: scale(1.12); animation: none; }
+    .floating-wa-label {
+      position: fixed;
+      bottom: 42px; right: 100px; z-index: 999;
+      background: var(--navy-2);
+      border: 1px solid rgba(30,123,225,0.3);
+      color: var(--off-white);
+      padding: 8px 14px; border-radius: 8px;
+      font-size: 13px; font-weight: 600;
+      white-space: nowrap;
+      animation: fadeIn 1s 2s ease both;
+      pointer-events: none;
+    }
+
+    /* -- ANIMATIONS -- */
+    @keyframes slideIn { from { opacity:0; transform:translateX(-24px); } to { opacity:1; transform:translateX(0); } }
+    @keyframes floatUp { from { opacity:0; transform:translateY(32px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @keyframes pulse { 0%,100% { box-shadow: 0 8px 40px rgba(37,211,102,0.4); } 50% { box-shadow: 0 8px 56px rgba(37,211,102,0.65); } }
+    @keyframes bounce { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-8px); } }
+
+    /* -- URGENCY BANNER -- */
+    .urgency-bar {
+      background: linear-gradient(90deg, #c0392b 0%, #e74c3c 50%, #c0392b 100%);
+      background-size: 200% auto;
+      animation: urgencySlide 3s linear infinite;
+      color: white;
+      text-align: center;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      position: relative;
+      overflow: hidden;
+    }
+    @keyframes urgencySlide {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+    .urgency-bar .ub-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .urgency-pill {
+      background: rgba(255,255,255,0.22);
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 30px;
+      padding: 3px 12px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      animation: pillBlink 1.4s ease-in-out infinite;
+    }
+    @keyframes pillBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.55; }
+    }
+    .urgency-bar .ub-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      color: #c0392b;
+      font-weight: 800;
+      font-size: 13px;
+      padding: 6px 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    }
+    .urgency-bar .ub-cta:hover { transform: scale(1.05); box-shadow: 0 6px 24px rgba(0,0,0,0.3); }
+
+    /* -- RESPONSIVE -- */
+    /* -- MOBILE HERO IMAGE -- */
+    .hero-mobile-img {
+      display: none;
+    }
+    .hero-img-wrap {
+      display: none;
+    }
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .hero-card { order: -1; }
+      .hero-img-wrap {
+        display: block;
+        position: relative;
+        order: -2;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 12px 48px rgba(0,0,0,0.45);
+      }
+      .hero-mobile-img {
+        display: block;
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+        border-radius: 18px;
+      }
+      .hero-img-cta {
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, transparent 100%);
+        padding: 28px 20px 20px;
+        display: flex;
+        justify-content: center;
+      }
+      .hero-img-cta a {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #25D366;
+        color: white;
+        text-decoration: none;
+        padding: 14px 28px;
+        border-radius: 50px;
+        font-size: 15px;
+        font-weight: 800;
+        box-shadow: 0 4px 20px rgba(37,211,102,0.55);
+        animation: pulse 2.5s infinite;
+        white-space: nowrap;
+      }
+      .hero-img-cta a:hover { background: #1DA851; animation: none; transform: scale(1.03); }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 12px 20px; }
+      .nav-phone { display: none; }
+      .hero-grid { padding: 40px 20px; }
+      .section { padding: 56px 20px; }
+      .how-section { padding: 56px 20px; }
+      .deal-banner { margin: 0 20px; padding: 28px 24px; }
+      .deal-cta { align-items: center; }
+      .final-cta { padding: 56px 20px; }
+      footer { padding: 24px 20px; }
+      .trust-bar { padding: 14px 20px; gap: 14px; }
+      .floating-wa-label { display: none; }
+      .urgency-bar { font-size: 12px; padding: 10px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP STRIP -->
+  <div class="top-strip">
+    <span class="strip-badge">Limited Time</span>
+    &#127919; 15% Instant Off &nbsp;<strong>Today</strong> for new customers &mdash; WhatsApp us now!
+  </div>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-logo">
+      <div class="logo-icon">&#10024;</div>
+      Reddy Spark<span class="logo-accent">Clean</span> Pro
+    </div>
+    <div class="nav-phone">&#128222; Available 24/7</div>
+    <a id="nav-wa-btn" class="nav-cta" href="https://wa.me/6283132796924?text=I%20want%20Service%20and%2015%25" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Book on WhatsApp
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+    <div class="hero-grid">
+      <!-- Left content -->
+      <div class="hero-left">
+        <div class="hero-badge">&#10022; Hyderabad's #1 Cleaning Service</div>
+        <h1>Your Home,<br/><span class="highlight">Spotlessly Clean</span><br/>Guaranteed!</h1>
+        <p>Professional deep cleaning done by trained, background-verified staff using eco-friendly products. We clean, you relax &mdash; 100% satisfaction guaranteed or your money back.</p>
+        <div class="hero-actions">
+          <a id="hero-wa-btn" class="btn-wa-hero" href="https://wa.me/6283132796924?text=I%20want%20Service%20and%2015%25" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            WhatsApp &amp; Book Now &mdash; Instant Reply
+          </a>
+          <a id="hero-scroll-btn" class="btn-call" href="#how-it-works">&#129529; How It Works</a>
+        </div>
+        <div class="hero-guarantee">
+          <span class="check">&#10003;</span> No advance payment &nbsp;
+          <span class="check">&#10003;</span> Same-day booking &nbsp;
+          <span class="check">&#10003;</span> Verified cleaners
+        </div>
+      </div>
+
+      <!-- Mobile hero image with WhatsApp CTA (hidden on desktop) -->
+      <div class="hero-img-wrap">
+        <img src="cleaning hero.png" alt="Professional home cleaning service" class="hero-mobile-img" />
+        <div class="hero-img-cta">
+          <a href="https://wa.me/6283132796924?text=I%20want%20Service%20and%2015%25" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Book Now &mdash; Get 15% OFF
+          </a>
+        </div>
+      </div>
+
+      <!-- Right card -->
+      <div class="hero-card">
+        <div class="card-title"><span>&#10024;</span> What We Clean</div>
+        <ul class="service-list">
+          <li><span class="service-check">&#10003;</span> Full Home Deep Cleaning</li>
+          <li><span class="service-check">&#10003;</span> Kitchen &amp; Bathroom Scrubbing</li>
+          <li><span class="service-check">&#10003;</span> Sofa &amp; Carpet Cleaning</li>
+          <li><span class="service-check">&#10003;</span> Window &amp; Glass Cleaning</li>
+          <li><span class="service-check">&#10003;</span> Move-in / Move-out Cleaning</li>
+          <li><span class="service-check">&#10003;</span> Post-Construction Cleaning</li>
+        </ul>
+        <a id="card-wa-btn" class="card-wa-btn" href="https://wa.me/6283132796924?text=I%20want%20Service%20and%2015%25" target="_blank" rel="noopener">
+          &#128172; WhatsApp for Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-item"><span class="trust-icon">&#11088;</span> <span class="trust-num">4.8/5</span> Rating</div>
+    <div class="trust-item"><span class="trust-icon">&#127968;</span> <span class="trust-num">5,000+</span> Homes Cleaned</div>
+    <div class="trust-item"><span class="trust-icon">&#128274;</span> Verified Staff</div>
+    <div class="trust-item"><span class="trust-icon">&#9851;</span> Eco-Friendly Products</div>
+    <div class="trust-item"><span class="trust-icon">&#128175;</span> Money-Back Guarantee</div>
+  </div>
+
+  <!-- URGENCY CTA BAR -->
+  <div class="urgency-bar">
+    <div class="ub-inner">
+      <span class="urgency-pill">&#9889; Today Only</span>
+      <span>&#128293; <strong>LIMITED TIME:</strong> Get 15% OFF instantly &mdash; Only a few slots left for today!</span>
+      <a class="ub-cta" href="https://wa.me/6283132796924?text=I%20want%20Service%20and%2015%25" target="_blank" rel="noopener">
+        Claim Now &#8594;
+      </a>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="how-section" id="how-it-works">
+    <div class="how-inner">
+      <div class="section-eyebrow">Process</div>
+      <h2 class="section-title">How It Works</h2>
+      <div class="how-steps">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-title">WhatsApp Us</div>
+          <p class="step-desc">Send us a message with your location and service needed. We reply within 5 minutes.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-title">Get a Quote</div>
+          <p class="step-desc">Receive an instant price quote with no hidden charges. Book at your convenience.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-title">We Come to You</div>
+          <p class="step-desc">Our trained cleaners arrive on time with all equipment and eco-friendly products.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-title">Enjoy the Clean</div>
+          <p class="step-desc">Inspect the work. Pay only if satisfied. No advance, no hidden fees.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEAL BANNER -->
+  <section style="padding: 64px 48px;" id="offers">
+    <div class="deal-banner">
+      <div class="deal-text">
+        <h3>&#128293; <em>July Special:</em> 50% OFF<br/>First Deep Cleaning!</h3>
+        <p>Limited slots available. Use code <strong style="color:var(--teal)">SPARKJULY</strong> when booking.</p>
+      </div>
+      <div class="deal-timer">
+        <div class="dtime-unit">
+          <span class="dtime-val" id="d-hours">11</span>
+          <span class="dtime-lbl">Hours</span>
+        </div>
+        <span class="dtime-sep">:</span>
+        <div class="dtime-unit">
+          <span class="dtime-val" id="d-mins">59</span>
+          <span class="dtime-lbl">Mins</span>
+        </div>
+        <span class="dtime-sep">:</span>
+        <div class="dtime-unit">
+          <span class="dtime-val" id="d-secs">59</span>
+          <span class="dtime-lbl">Secs</span>
+        </div>
+      </div>
+      <div class="deal-cta">
+        <a id="deal-wa-btn" class="deal-btn" href="https://wa.me/6283132796924?text=I%20want%20Service%20and%2015%25" target="_blank" rel="noopener">
+          &#128172; Claim Offer on WhatsApp
+        </a>
+        <div class="deal-note">&#9889; Only 8 slots left today</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" id="reviews">
+    <div class="section-eyebrow">Reviews</div>
+    <h2 class="section-title">5,000+ Happy Customers</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="review-header">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="verified">&#10003; Verified</div>
+        </div>
+        <p class="review-text">"Booked on WhatsApp at 9am, cleaners arrived by 11am. My 3BHK looks brand new! They even cleaned the balcony rails I didn't ask for. Exceptional!"</p>
+        <div class="reviewer-info">
+          <div class="reviewer-avatar">S</div>
+          <div>
+            <div class="reviewer-name">Sunita Nair</div>
+            <div class="reviewer-loc">&#128205; Banjara Hills, Hyderabad</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="review-header">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="verified">&#10003; Verified</div>
+        </div>
+        <p class="review-text">"Used their move-out service. The landlord was impressed and returned our deposit without any argument. Worth every rupee. Will use again!"</p>
+        <div class="reviewer-info">
+          <div class="reviewer-avatar">K</div>
+          <div>
+            <div class="reviewer-name">Karthik Iyer</div>
+            <div class="reviewer-loc">&#128205; Kondapur, Hyderabad</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="review-header">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="verified">&#10003; Verified</div>
+        </div>
+        <p class="review-text">"The sofa cleaning was incredible. Stains that were there for months &mdash; gone! The team was polite, professional, and super quick. Highly recommended!"</p>
+        <div class="reviewer-info">
+          <div class="reviewer-avatar">M</div>
+          <div>
+            <div class="reviewer-name">Meera Gupta</div>
+            <div class="reviewer-loc">&#128205; Gachibowli, Hyderabad</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" id="contact">
+    <h2>Ready for a <span class="hl">Sparkling Clean</span> Home?</h2>
+    <p>Join 5,000+ happy families. Get an instant free quote and book your cleaning in under 2 minutes on WhatsApp.</p>
+    <a id="final-wa-btn" class="wa-final-btn" href="https://wa.me/6283132796924?text=I%20want%20Service%20and%2015%25" target="_blank" rel="noopener">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      WhatsApp Now &mdash; Free Quote!
+    </a>
+    <p style="margin-top:20px; font-size:13px; color:#3A5070;">
+      &#9889; Replies in under 5 minutes &nbsp;|&nbsp; Available 7 days a week, 7AM&ndash;9PM
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Reddy SparkClean Pro</strong> &nbsp;|&nbsp; Professional Home Cleaning Services, Hyderabad &nbsp;|&nbsp; &copy; 2025 All Rights Reserved</p>
+    <p style="margin-top:6px;">WhatsApp: <a href="https://wa.me/6283132796924?text=I%20want%20Service%20and%2015%25">Chat Now</a> &nbsp;|&nbsp; Eco-friendly &bull; Verified Staff &bull; Guaranteed Results</p>
+  </footer>
+
+  <!-- FLOATING WA -->
+  <div class="floating-wa-label">&#128172; Book a cleaning!</div>
+  <a id="floating-wa-btn" class="floating-wa" href="https://wa.me/6283132796924?text=I%20want%20Service%20and%2015%25" target="_blank" rel="noopener" aria-label="Book cleaning on WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <script>
+    // Countdown Timer
+    function startCountdown() {
+      const stored = localStorage.getItem('sparkclean_deadline');
+      let deadline;
+      if (stored) {
+        deadline = parseInt(stored, 10);
+      } else {
+        deadline = Date.now() + 11 * 3600 * 1000 + 59 * 60 * 1000 + 59 * 1000;
+        localStorage.setItem('sparkclean_deadline', deadline);
+      }
+      function tick() {
+        const diff = Math.max(0, deadline - Date.now());
+        const h = Math.floor(diff / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        document.getElementById('d-hours').textContent = String(h).padStart(2, '0');
+        document.getElementById('d-mins').textContent = String(m).padStart(2, '0');
+        document.getElementById('d-secs').textContent = String(s).padStart(2, '0');
+        if (diff > 0) setTimeout(tick, 1000);
+      }
+      tick();
+    }
+    startCountdown();
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.step-card, .testimonial-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
